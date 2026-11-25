@@ -31,41 +31,6 @@ Why the split matters: giving cities the numbers 0, 1, 2 would tell the model th
 
 The sample file has only 30 rows, so accuracy on a 6 row test set changes a lot with the seed. Treat it as a demonstration, not a reliable estimate.
 
-## Files
-
-- `app.py` Streamlit interface with Encode, Train, and Predict tabs
-- `pipeline.py` column groups, validation, encoders, and training
-- `rain.js` the falling binary animation
-- `styles.css` page styling
-- `.streamlit/config.toml` dark theme
-- `customer_purchase_notebook.ipynb` the same workflow step by step
-- `dataset/customer_purchase_prediction.csv` sample data
-- `requirements.txt` Python dependencies
-
-## Setup
-
-```
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-On Windows activate with `.venv\Scripts\activate`.
-
-## Run the app
-
-```
-streamlit run app.py
-```
-
-## Run the notebook
-
-```
-jupyter notebook customer_purchase_notebook.ipynb
-```
-
-Start both from the project folder so the relative `dataset/` path resolves.
-
 ## Using your own data
 
 Upload a CSV with these columns: Age, Annual_Income, Gender, City, Education, Membership, Purchased. Education must use School, Graduate, Postgraduate, PhD. Membership must use Bronze, Silver, Gold, Platinum. Purchased must be Yes or No.
